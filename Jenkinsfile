@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
+                echo 'Building..'
                 // Add your build tool commands here, e.g., sh 'mvn clean package'
             }
             post {
