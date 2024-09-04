@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                // Add your build tool commands here, e.g., sh 'mvn clean package'
+                echo 'Building..'             
             }
             post {
                 success {
@@ -22,8 +21,7 @@ pipeline {
         }
         stage('Unit and Integration Tests') {
             steps {
-                echo 'Running Unit and Integration Tests...'
-                // Add test tool commands here, e.g., sh 'mvn test'
+                echo 'Running Unit and Integration Tests...'           
             }
             post {
                 success {
@@ -40,8 +38,7 @@ pipeline {
         }
         stage('Code Analysis') {
             steps {
-                echo 'Performing Code Analysis...'
-                // Add code analysis tool commands here, e.g., sh 'sonar-scanner'
+                echo 'Performing Code Analysis...'              
             }
             post {
                 success {
@@ -59,7 +56,6 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Performing Security Scan...'
-                // Add security scan tool commands here
             }
             post {
                 success {
@@ -77,7 +73,6 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to Staging...'
-                // Add deployment commands here, e.g., sh 'deploy-to-staging.sh'
             }
             post {
                 success {
@@ -95,7 +90,7 @@ pipeline {
         stage('Integration Tests on Staging') {
             steps {
                 echo 'Running Integration Tests on Staging...'
-                // Add staging test commands here
+            
             }
             post {
                 success {
@@ -113,7 +108,6 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to Production...'
-                // Add production deployment commands here, e.g., sh 'deploy-to-prod.sh'
             }
             post {
                 success {
