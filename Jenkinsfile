@@ -8,9 +8,12 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                    emailext (
+                        attachLog : true,
+                        to: 'ruvinyaye@gmail.com',
                          subject: "Build Stage Succeeded",
                          body: "The Build stage has completed successfully."
+                        )
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -25,9 +28,12 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                    emailext (
+                        attachLog :true,
+                        to: 'ruvinyaye@gmail.com',
                          subject: "Testing Stage Succeeded",
                          body: "Unit and Integration Tests stage completed successfully."
+                        )
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -42,9 +48,11 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                    emailext (
+                        attachLog :true,
+                         mail to: 'ruvinyaye@gmail.com',
                          subject: "Code Analysis Stage Succeeded",
-                         body: "The Code Analysis stage has completed successfully."
+                         body: "The Code Analysis stage has completed successfully.")
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -59,9 +67,11 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                   emailext (
+                        attachLog :true,
+                         mail to: 'ruvinyaye@gmail.com',
                          subject: "Security Scan Stage Succeeded",
-                         body: "The Security Scan stage has completed successfully."
+                         body: "The Security Scan stage has completed successfully.")
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -76,9 +86,11 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                   emailext (
+                        attachLog :true, 
+                       mail to: 'ruvinyaye@gmail.com',
                          subject: "Deploy to Staging Succeeded",
-                         body: "Deployment to Staging has completed successfully."
+                         body: "Deployment to Staging has completed successfully.")
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -94,9 +106,11 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                    emailext (
+                        attachLog :true,
+                        mail to: 'ruvinyaye@gmail.com',
                          subject: "Staging Tests Succeeded",
-                         body: "Integration Tests on Staging have completed successfully."
+                         body: "Integration Tests on Staging have completed successfully.")
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
@@ -111,9 +125,11 @@ pipeline {
             }
             post {
                 success {
-                    mail to: 'ruvinyaye@gmail.com',
+                   emailext (
+                        attachLog :true, 
+                       mail to: 'ruvinyaye@gmail.com',
                          subject: "Production Deployment Succeeded",
-                         body: "Deployment to Production has completed successfully."
+                         body: "Deployment to Production has completed successfully.")
                 }
                 failure {
                     mail to: 'ruvinyaye@gmail.com',
