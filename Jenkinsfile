@@ -50,7 +50,7 @@ pipeline {
                 success {
                     emailext (
                         attachLog :true,
-                         mail to: 'ruvinyaye@gmail.com',
+                         to: 'ruvinyaye@gmail.com',
                          subject: "Code Analysis Stage Succeeded",
                          body: "The Code Analysis stage has completed successfully.")
                 }
@@ -69,7 +69,7 @@ pipeline {
                 success {
                    emailext (
                         attachLog :true,
-                         mail to: 'ruvinyaye@gmail.com',
+                         to: 'ruvinyaye@gmail.com',
                          subject: "Security Scan Stage Succeeded",
                          body: "The Security Scan stage has completed successfully.")
                 }
@@ -88,7 +88,7 @@ pipeline {
                 success {
                    emailext (
                         attachLog :true, 
-                       mail to: 'ruvinyaye@gmail.com',
+                         to: 'ruvinyaye@gmail.com',
                          subject: "Deploy to Staging Succeeded",
                          body: "Deployment to Staging has completed successfully.")
                 }
@@ -108,7 +108,7 @@ pipeline {
                 success {
                     emailext (
                         attachLog :true,
-                        mail to: 'ruvinyaye@gmail.com',
+                         to: 'ruvinyaye@gmail.com',
                          subject: "Staging Tests Succeeded",
                          body: "Integration Tests on Staging have completed successfully.")
                 }
@@ -127,7 +127,7 @@ pipeline {
                 success {
                    emailext (
                         attachLog :true, 
-                       mail to: 'ruvinyaye@gmail.com',
+                        to: 'ruvinyaye@gmail.com',
                          subject: "Production Deployment Succeeded",
                          body: "Deployment to Production has completed successfully.")
                 }
